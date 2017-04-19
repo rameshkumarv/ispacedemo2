@@ -102,6 +102,22 @@ body {
     border-radius: 5px;
 }
 
+.page-footer ul li a {
+  color: #4db6ac;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+ a.brand-logo:hover  {
+  color: #4db6ac; 
+ }
+
+/* menu*/
+.dropdown-content{
+    overflow: visible !important;
+}
 /* menu
 http://jasonweaver.name/lab/flexiblenavigation/
 */
