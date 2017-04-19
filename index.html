@@ -40,24 +40,39 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">iSpace</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-        <li>
-                <a class='dropdown-button2' href='#' data-activates='dropdown2'>Dropdown></a>
-            </li>
-      </ul>
-
-      <ul id='dropdown2' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
+        <li><a class="products_menu" href="#!" data-activates="menu-level1" data-hover="hover">Products<i class="material-icons right">arrow_drop_down</i></a>
+          <ul id='menu-level1' class='dropdown-content'>
             <li><a href="#!">two</a></li>
-        </ul>
-        
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+            <li>
+              <a class='products_menu' href='#' data-activates='menu-level2' data-hover="hover" data-alignment="left">Drop Me!</a>
+              <ul id='menu-level2' class='dropdown-content'>
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#!" class="products_menu" data-activates='menu-level3' data-hover="hover" data-alignment="left">three</a>
+                  <ul id='menu-level3' class='dropdown-content'>
+                    <li><a href="#!">one</a></li>
+                    <li><a href="#!">two</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          
+        </li>
+        <li><a href="#">About iSpace</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Enquire</a></li>  
       </ul>
-      <!--<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
     </div>
   </nav>
 
+  
   <!--<ul id="slide-out" class="side-nav">
     <li><div class="userView">
       <div class="background">
@@ -181,19 +196,19 @@
         <div class="col l3 s12">
           <h5 class="second-color">Popular Products</h5>
           <ul>
-            <li><a class="white-text" href="#!">Washroom cubicle</a></li>
-            <li><a class="white-text" href="#!">Washroom partitions</a></li>
-            <li><a class="pri-color" href="#!">Office furniture</a></li>
-            <li><a class="pri-color" href="#!">Link 4</a></li>
+            <li><a href="#!">Washroom cubicle</a></li>
+            <li><a href="#!">Washroom partitions</a></li>
+            <li><a href="#!">Office furniture</a></li>
+            <li><a href="#!">Link 4</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="second-color">Support</h5>
           <ul>
-            <li><a class="pri-color" href="#!">Link 1</a></li>
-            <li><a class="pri-color" href="#!">Link 2</a></li>
-            <li><a class="pri-color" href="#!">Link 3</a></li>
-            <li><a class="pri-color" href="#!">Link 4</a></li>
+            <li><a href="#!">Link 1</a></li>
+            <li><a href="#!">Link 2</a></li>
+            <li><a href="#!">Link 3</a></li>
+            <li><a href="#!">Link 4</a></li>
           </ul>
         </div>
       </div>
@@ -222,9 +237,19 @@
   
   $('.collapsible').collapsible();
 
+    $('.products_menu').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: ($('.dropdown-content').width()*3)/2.5 + 5, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
   </script>
   <script>
-        $(document).ready(function(){
+        /*$(document).ready(function(){
           $('.dropdown-button2').dropdown({
               inDuration: 300,
               outDuration: 225,
@@ -236,7 +261,7 @@
             }
           );
          
-        });
+        });*/
         </script>
   </body>
 </html>
